@@ -1,9 +1,9 @@
 .button{
     max-width: 600px;
-    background-color: var(--red-900);
+    background-color: black;
     border: 0;
     padding: 0.4rem;
-    color: var(--white);
+    color: white;
     border-radius: 0.5rem;
 
     &[disabled]{
@@ -19,7 +19,7 @@
 }
 
 .buttonText{
-    color: #B4000F;
+    color: white;
 }
 
 @keyframes animate {

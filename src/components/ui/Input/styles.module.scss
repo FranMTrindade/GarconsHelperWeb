@@ -4,12 +4,11 @@
     border: 0;
     border-radius: 0.5rem;
     background-color: var(--dark-900);
-    color: var(--white);
+    color: black;
     padding: 1rem;
-    border: 1px solid #770D15
+    border: 1px solid black
 }
 
 .input::placeholder{
-    color: #597718;
-    text-align: center
+    color: black;
 }
