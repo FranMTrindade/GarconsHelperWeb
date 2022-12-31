@@ -9,6 +9,7 @@ import { Input } from "../components/ui/Input";
 import { Button } from "../components/ui/Button";
 import logo from '../../public/logo.jpeg'
 import { AuthContext } from "../context/AuthContext";
+import { toast } from 'react-toastify';
 
 
 
@@ -22,12 +23,21 @@ export default function Home() {
   async function handleLogin(event: FormEvent){
     event.preventDefault(); 
 
+    if(email === '' || password  === ''){
+      toast.error("Preencha todos os dados!")
+      return;
+    }
+
+    setloading(true);
+
     let data = {
       email,
       password
     }
 
     await signIn(data)
+
+    setloading(false);
 
   }
  
@@ -50,7 +60,7 @@ export default function Home() {
             type="text"
             value={email}
             onChange={ (e) => setEmail(e.target.value)} />
-            
+          
             <Input 
             placeholder="Digite sua senha" 
             type="password"
@@ -59,7 +69,7 @@ export default function Home() {
             
             <Button 
             type="submit" 
-            loading={false}> Acessar </Button>
+            loading={loading}> Acessar </Button>
         
           </form>
 
