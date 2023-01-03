@@ -1,3 +1,6 @@
+import { canSRRAuth } from "../../utils/canSRRAuth"
+
+
 
 export default function DashBoard(){
     return(
@@ -6,3 +9,10 @@ export default function DashBoard(){
         </div>
     )
 }
+
+export const getServerSideProps =  canSRRAuth(async (ctx) =>{
+
+    return{
+        props:{}
+    }
+})
