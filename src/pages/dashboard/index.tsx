@@ -1,12 +1,21 @@
 import { canSRRAuth } from "../../utils/canSRRAuth"
-
+import Head from 'next/head'
+import { Header } from "../../components/Header"
 
 
 export default function DashBoard(){
     return(
+        <>
+        <Head>
+            <title>Home</title>
+        </Head>
+
         <div>
-            <h1>Painel</h1>
+        <Header/>
+            <h1>Home</h1>
         </div>
+        
+        </>
     )
 }
 

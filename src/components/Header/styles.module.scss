@@ -1,0 +1,47 @@
+.headrContainer{
+    height: 6.4rem;
+}
+
+.headerContent{
+    max-width: 1375px;
+    height: 6.4rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+
+    a{
+        color: #000;
+        padding: 0 0.5rem;
+        display: inline-block;
+        position: relative;
+
+        & + a {
+            margin-left: 2rem;
+        }
+
+        &:hover{
+            color: #C0C0C0
+        }
+    }
+
+    button{
+        
+        margin: 2rem;
+        background-color: transparent;
+        border: 0;
+
+        &:hover{
+            transform: scale(1.2);
+            color: #C0C0C0;
+        }
+    }
+  
+}
+
